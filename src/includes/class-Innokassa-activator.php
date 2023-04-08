@@ -3,19 +3,19 @@
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
 /**
- * @link       https://innokassa.ru/
+ * @link       https://digitalkassa.ru/
  * @since      1.0.0
  *
- * @package    Innokassa
- * @subpackage Innokassa/includes
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/includes
  */
 
 /**
  * @since      1.0.0
- * @package    Innokassa
- * @subpackage Innokassa/includes
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/includes
  */
-class InnokassaActivator
+class DigitalkassaActivator
 {
     /**
      * @since    1.0.0

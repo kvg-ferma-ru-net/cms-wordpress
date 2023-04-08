@@ -1,33 +1,33 @@
 <?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
-use Innokassa\MDK\Client;
-use Innokassa\MDK\Net\Transfer;
-use Innokassa\MDK\Net\ConverterApi;
-use Innokassa\MDK\Logger\LoggerFile;
-use Innokassa\MDK\Net\NetClientCurl;
-use Innokassa\MDK\Services\PipelineBase;
-use Innokassa\MDK\Services\AutomaticBase;
-use Innokassa\MDK\Services\ConnectorBase;
-use Innokassa\MDK\Storage\ConverterStorage;
+use Digitalkassa\MDK\Client;
+use Digitalkassa\MDK\Net\Transfer;
+use Digitalkassa\MDK\Net\ConverterApi;
+use Digitalkassa\MDK\Logger\LoggerFile;
+use Digitalkassa\MDK\Net\NetClientCurl;
+use Digitalkassa\MDK\Services\PipelineBase;
+use Digitalkassa\MDK\Services\AutomaticBase;
+use Digitalkassa\MDK\Services\ConnectorBase;
+use Digitalkassa\MDK\Storage\ConverterStorage;
 
 require_once plugin_dir_path(__FILE__) . '../include.php';
 
 /**
  * Фабрика клиента MDK
  */
-class InnokassaClientFactory
+class DigitalkassaClientFactory
 {
     public static function build(): Client
     {
-        $receiptIdFactory = new InnokassaReceiptIdFactoryMetaConcrete();
+        $receiptIdFactory = new DigitalkassaReceiptIdFactoryMetaConcrete();
 
-        $settings = new InnokassaSettingsConcrete();
-        $receiptStorage = new InnokassaReceiptStorageConcrete(
+        $settings = new DigitalkassaSettingsConcrete();
+        $receiptStorage = new DigitalkassaReceiptStorageConcrete(
             $GLOBALS['wpdb'],
             new ConverterStorage($receiptIdFactory)
         );
-        $receiptAdapter = new InnokassaReceiptAdapterConcrete($settings);
+        $receiptAdapter = new DigitalkassaReceiptAdapterConcrete($settings);
         $logger = new LoggerFile();
         $transfer = new Transfer(
             new NetClientCurl(),

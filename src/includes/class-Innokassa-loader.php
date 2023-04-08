@@ -3,18 +3,18 @@
 // phpcs:disable
 
 /**
- * @link       https://innokassa.ru/
+ * @link       https://digitalkassa.ru/
  * @since      1.0.0
  *
- * @package    Innokassa
- * @subpackage Innokassa/includes
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/includes
  */
 
 /**
- * @package    Innokassa
- * @subpackage Innokassa/includes
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/includes
  */
-class Innokassa_Loader
+class Digitalkassa_Loader
 {
     /**
      * @since    1.0.0

@@ -1,10 +1,10 @@
 {
-    "name": "innokassa/wordpress-module",
-    "description": "wordpress module fiscalization by Innokassa",
+    "name": "digitalkassa/wordpress-module",
+    "description": "wordpress module fiscalization by Digitalkassa",
     "version": "2.0.0",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://innokassa.ru/",
+    "homepage": "https://digitalkassa.ru/",
     "authors": [
         {
             "name": "Buturlin Vitaliy (Byurrer)",

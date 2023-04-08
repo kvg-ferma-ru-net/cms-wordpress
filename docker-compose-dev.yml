@@ -28,7 +28,7 @@ services:
       - ./wordpress/:/var/www/html/
       - ./.docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
       - ./.docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini
-      - ./src/:/var/www/html/wp-content/plugins/innokassa.fiscal/
+      - ./src/:/var/www/html/wp-content/plugins/digitalkassa.fiscal/
     networks:
       - app-network
 

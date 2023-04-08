@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @link       https://innokassa.ru/
+ * @link       https://digitalkassa.ru/
  * @since      1.0.0
  *
- * @package    Innokassa
- * @subpackage Innokassa/public/partials
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/public/partials
  */

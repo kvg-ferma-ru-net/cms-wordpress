@@ -2,18 +2,18 @@
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
-use Innokassa\MDK\Entities\Receipt;
-use Innokassa\MDK\Storage\ReceiptFilter;
-use Innokassa\MDK\Entities\ConverterAbstract;
-use Innokassa\MDK\Collections\ReceiptCollection;
-use Innokassa\MDK\Storage\ReceiptStorageInterface;
+use Digitalkassa\MDK\Entities\Receipt;
+use Digitalkassa\MDK\Storage\ReceiptFilter;
+use Digitalkassa\MDK\Entities\ConverterAbstract;
+use Digitalkassa\MDK\Collections\ReceiptCollection;
+use Digitalkassa\MDK\Storage\ReceiptStorageInterface;
 
 require_once plugin_dir_path(__FILE__) . '../include.php';
 
 /**
  * Реализация хранилища чеков
  */
-class InnokassaReceiptStorageConcrete implements ReceiptStorageInterface
+class DigitalkassaReceiptStorageConcrete implements ReceiptStorageInterface
 {
     /**
      * @param wpdb $db
@@ -23,7 +23,7 @@ class InnokassaReceiptStorageConcrete implements ReceiptStorageInterface
     {
         $this->db = $db;
         $this->converter = $converter;
-        $this->table = $this->db->prefix . 'innokassa_receipts';
+        $this->table = $this->db->prefix . 'digitalkassa_receipts';
     }
 
     /**

@@ -1,11 +1,11 @@
 <?php
 
 /**
- * @link       https://innokassa.ru/
+ * @link       https://digitalkassa.ru/
  * @since      1.1.0
  *
- * @package    Innokassa
- * @subpackage Innokassa/admin/partials
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/admin/partials
  */
 
 ?>
@@ -85,7 +85,7 @@ $aVat = array(
         border-radius: 10px;
     }
 
-    #Innokassa_check_wnd {
+    #Digitalkassa_check_wnd {
         position: absolute;
         z-index: 99999;
         top: 0px;
@@ -180,35 +180,35 @@ $aVat = array(
             </clipPath>
         </defs>
     </svg>
-    <h1>Настройки innokassa</h1>
+    <h1>Настройки digitalkassa</h1>
     <form method="post" action="options.php">
-        <?php settings_fields('Innokassa-option-group');
-        settings_errors('Innokassa-option-group-errors', '', false);
+        <?php settings_fields('Digitalkassa-option-group');
+        settings_errors('Digitalkassa-option-group-errors', '', false);
         ?>
-        <?php do_settings_sections('Innokassa_submenu'); ?>
+        <?php do_settings_sections('Digitalkassa_submenu'); ?>
         <div class="flex_div">
             <div>
                 <label>Идентификатор актора</label>
-                <input name="innokassa_option_actor_id"
-                value="<?php esc_html_e(get_option('innokassa_option_actor_id'), 'text_domain'); ?>" />
+                <input name="digitalkassa_option_actor_id"
+                value="<?php esc_html_e(get_option('digitalkassa_option_actor_id'), 'text_domain'); ?>" />
             </div>
             <div>
                 <label>Токен актора</label>
-                <input name="innokassa_option_actor_token"
-                value="<?php esc_html_e(get_option('innokassa_option_actor_token'), 'text_domain'); ?>" />
+                <input name="digitalkassa_option_actor_token"
+                value="<?php esc_html_e(get_option('digitalkassa_option_actor_token'), 'text_domain'); ?>" />
             </div>
             <div>
                 <label>Группу касс</label>
-                <input name="innokassa_option_cashbox" value="<?php esc_html_e(get_option('innokassa_option_cashbox'), 'text_domain'); ?>" />
+                <input name="digitalkassa_option_cashbox" value="<?php esc_html_e(get_option('digitalkassa_option_cashbox'), 'text_domain'); ?>" />
             </div>
         </div>
         <div class="flex_div">
             <div>
                 <label>Выберите схему фискализации:</label>
-                <select name="innokassa_option_scheme">
+                <select name="digitalkassa_option_scheme">
                     <?php
                     foreach ($aSchemes as $key => $value) {
-                        if ($key == get_option('innokassa_option_scheme')) {
+                        if ($key == get_option('digitalkassa_option_scheme')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php
@@ -223,10 +223,10 @@ $aVat = array(
             </div>
             <div>
                 <label>Статус заказа для чека предоплаты</label>
-                <select name="innokassa_option_status_first_receipt" value="">
+                <select name="digitalkassa_option_status_first_receipt" value="">
                     <?php
                     foreach ($aOrderStatuses as $key => $value) {
-                        if ($key == get_option('innokassa_option_status_first_receipt')) {
+                        if ($key == get_option('digitalkassa_option_status_first_receipt')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php
@@ -241,10 +241,10 @@ $aVat = array(
             </div>
             <div>
                 <label>Статус заказа для чека полного расчета</label>
-                <select name="innokassa_option_status_second_receipt">
+                <select name="digitalkassa_option_status_second_receipt">
                     <?php
                     foreach ($aOrderStatuses as $key => $value) {
-                        if ($key == get_option('innokassa_option_status_second_receipt')) {
+                        if ($key == get_option('digitalkassa_option_status_second_receipt')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php
@@ -261,15 +261,15 @@ $aVat = array(
         <div class="flex_div">
             <div>
                 <label>Место расчетов</label>
-                <input name="innokassa_option_place_of_settlement"
-                value="<?php echo get_option('innokassa_option_place_of_settlement'); ?>" />
+                <input name="digitalkassa_option_place_of_settlement"
+                value="<?php echo get_option('digitalkassa_option_place_of_settlement'); ?>" />
             </div>
             <div>
                 <label>Налогообложение</label>
-                <select name="innokassa_option_taxation">
+                <select name="digitalkassa_option_taxation">
                     <?php
                     foreach ($аTaxation as $key => $value) {
-                        if ($key == get_option('innokassa_option_taxation')) {
+                        if ($key == get_option('digitalkassa_option_taxation')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php
@@ -284,10 +284,10 @@ $aVat = array(
             </div>
             <div>
                 <label>Тип позиции чека по умолчанию</label>
-                <select name="innokassa_option_type_of_receipt_position">
+                <select name="digitalkassa_option_type_of_receipt_position">
                     <?php
                     foreach ($aTypeOfReceiptPosition as $key => $value) {
-                        if ($key == get_option('innokassa_option_type_of_receipt_position')) {
+                        if ($key == get_option('digitalkassa_option_type_of_receipt_position')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php
@@ -304,10 +304,10 @@ $aVat = array(
         <div class="flex_div w66">
             <div>
                 <label>НДС позиции чека по умолчанию</label>
-                <select name="innokassa_option_vat">
+                <select name="digitalkassa_option_vat">
                     <?php
                     foreach ($aVat as $key => $value) {
-                        if ($key == get_option('innokassa_option_vat')) {
+                        if ($key == get_option('digitalkassa_option_vat')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php
@@ -322,10 +322,10 @@ $aVat = array(
             </div>
             <div>
                 <label>НДС доставки</label>
-                <select name="innokassa_option_delivery_vat">
+                <select name="digitalkassa_option_delivery_vat">
                     <?php
                     foreach ($aVat as $key => $value) {
-                        if ($key == get_option('innokassa_option_delivery_vat')) {
+                        if ($key == get_option('digitalkassa_option_delivery_vat')) {
                             ?>
                                 <option selected value="<?php esc_html_e($key, 'text_domain'); ?>"><?php esc_html_e($value, 'text_domain'); ?></option>
                             <?php

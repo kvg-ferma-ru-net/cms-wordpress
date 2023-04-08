@@ -2,14 +2,14 @@
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
-use Innokassa\MDK\Settings\SettingsAbstract;
+use Digitalkassa\MDK\Settings\SettingsAbstract;
 
 require_once plugin_dir_path(__FILE__) . '../include.php';
 
 /**
  * Реализация настроек из массива данных
  */
-class InnokassaSettingsConcrete extends SettingsAbstract
+class DigitalkassaSettingsConcrete extends SettingsAbstract
 {
     public function __construct()
     {
@@ -20,7 +20,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getActorId(string $siteId = ''): string
     {
-        return $this->get('innokassa_option_actor_id');
+        return $this->get('digitalkassa_option_actor_id');
     }
 
     /**
@@ -28,7 +28,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getActorToken(string $siteId = ''): string
     {
-        return $this->get('innokassa_option_actor_token');
+        return $this->get('digitalkassa_option_actor_token');
     }
 
     /**
@@ -36,7 +36,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getCashbox(string $siteId = ''): string
     {
-        return $this->get('innokassa_option_cashbox');
+        return $this->get('digitalkassa_option_cashbox');
     }
 
     /**
@@ -44,7 +44,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getLocation(string $siteId = ''): string
     {
-        return $this->get('innokassa_option_place_of_settlement');
+        return $this->get('digitalkassa_option_place_of_settlement');
     }
 
     /**
@@ -52,7 +52,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getTaxation(string $siteId = ''): int
     {
-        return $this->get('innokassa_option_taxation');
+        return $this->get('digitalkassa_option_taxation');
     }
 
     /**
@@ -60,7 +60,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getScheme(string $siteId = ''): int
     {
-        return $this->get('innokassa_option_scheme');
+        return $this->get('digitalkassa_option_scheme');
     }
 
     /**
@@ -68,7 +68,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getVatShipping(string $siteId = ''): int
     {
-        return $this->get('innokassa_option_delivery_vat');
+        return $this->get('digitalkassa_option_delivery_vat');
     }
 
     /**
@@ -76,7 +76,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getVatDefaultItems(string $siteId = ''): int
     {
-        return $this->get('innokassa_option_vat');
+        return $this->get('digitalkassa_option_vat');
     }
 
     /**
@@ -84,7 +84,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getTypeDefaultItems(string $siteId = ''): int
     {
-        return $this->get('innokassa_option_type_of_receipt_position');
+        return $this->get('digitalkassa_option_type_of_receipt_position');
     }
 
     /**
@@ -92,7 +92,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getOrderStatusReceiptPre(string $siteId = ''): string
     {
-        return $this->get('innokassa_option_status_first_receipt');
+        return $this->get('digitalkassa_option_status_first_receipt');
     }
 
     /**
@@ -100,7 +100,7 @@ class InnokassaSettingsConcrete extends SettingsAbstract
      */
     public function getOrderStatusReceiptFull(string $siteId = ''): string
     {
-        return $this->get('innokassa_option_status_second_receipt');
+        return $this->get('digitalkassa_option_status_second_receipt');
     }
 
     //######################################################################

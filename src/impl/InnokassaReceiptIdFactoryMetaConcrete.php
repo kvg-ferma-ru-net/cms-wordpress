@@ -2,11 +2,11 @@
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
-use Innokassa\MDK\Entities\ReceiptId\ReceiptIdFactoryMeta;
+use Digitalkassa\MDK\Entities\ReceiptId\ReceiptIdFactoryMeta;
 
 require_once plugin_dir_path(__FILE__) . '../include.php';
 
-class InnokassaReceiptIdFactoryMetaConcrete extends ReceiptIdFactoryMeta
+class DigitalkassaReceiptIdFactoryMetaConcrete extends ReceiptIdFactoryMeta
 {
     protected function getEngine(): string
     {

@@ -3,26 +3,26 @@
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
 /**
- * @link       https://innokassa.ru/
+ * @link       https://digitalkassa.ru/
  * @since      1.0.0
  *
- * @package    Innokassa
- * @subpackage Innokassa/public
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/public
  */
 
 /**
- * @package    Innokassa
- * @subpackage Innokassa/public
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/public
  * @author     Your Name <email@example.com>
  */
-class InnokassaPublic
+class DigitalkassaPublic
 {
     /**
      * @since    1.0.0
      * @access   private
-     * @var      string    $Innokassa    The ID of this plugin.
+     * @var      string    $Digitalkassa    The ID of this plugin.
      */
-    private $Innokassa;
+    private $Digitalkassa;
 
     /**
      * @since    1.0.0
@@ -33,12 +33,12 @@ class InnokassaPublic
 
     /**
      * @since    1.0.0
-     * @param      string    $Innokassa       The name of the plugin.
+     * @param      string    $Digitalkassa       The name of the plugin.
      * @param      string    $version    The version of this plugin.
      */
-    public function __construct($Innokassa, $version)
+    public function __construct($Digitalkassa, $version)
     {
-        $this->Innokassa = $Innokassa;
+        $this->Digitalkassa = $Digitalkassa;
         $this->version = $version;
     }
 
@@ -48,8 +48,8 @@ class InnokassaPublic
     public function enqueueStyles()
     {
         wp_enqueue_style(
-            $this->Innokassa,
-            plugin_dir_url(__FILE__) . 'css/Innokassa-public.css',
+            $this->Digitalkassa,
+            plugin_dir_url(__FILE__) . 'css/Digitalkassa-public.css',
             array(),
             $this->version,
             'all'
@@ -62,8 +62,8 @@ class InnokassaPublic
     public function enqueueScripts()
     {
         wp_enqueue_script(
-            $this->Innokassa,
-            plugin_dir_url(__FILE__) . 'js/Innokassa-public.js',
+            $this->Digitalkassa,
+            plugin_dir_url(__FILE__) . 'js/Digitalkassa-public.js',
             array('jquery'),
             $this->version,
             false

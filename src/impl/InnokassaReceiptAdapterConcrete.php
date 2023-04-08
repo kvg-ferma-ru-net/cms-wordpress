@@ -2,18 +2,18 @@
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
-use Innokassa\MDK\Entities\Atoms\Vat;
-use Innokassa\MDK\Entities\Atoms\Unit;
-use Innokassa\MDK\Entities\ReceiptItem;
-use Innokassa\MDK\Settings\SettingsAbstract;
-use Innokassa\MDK\Entities\Primitives\Notify;
-use Innokassa\MDK\Entities\Atoms\PaymentMethod;
-use Innokassa\MDK\Entities\Primitives\Customer;
-use Innokassa\MDK\Entities\Atoms\ReceiptSubType;
-use Innokassa\MDK\Entities\Atoms\ReceiptItemType;
-use Innokassa\MDK\Entities\ReceiptAdapterInterface;
-use Innokassa\MDK\Collections\ReceiptItemCollection;
-use Innokassa\MDK\Exceptions\Base\InvalidArgumentException;
+use Digitalkassa\MDK\Entities\Atoms\Vat;
+use Digitalkassa\MDK\Entities\Atoms\Unit;
+use Digitalkassa\MDK\Entities\ReceiptItem;
+use Digitalkassa\MDK\Settings\SettingsAbstract;
+use Digitalkassa\MDK\Entities\Primitives\Notify;
+use Digitalkassa\MDK\Entities\Atoms\PaymentMethod;
+use Digitalkassa\MDK\Entities\Primitives\Customer;
+use Digitalkassa\MDK\Entities\Atoms\ReceiptSubType;
+use Digitalkassa\MDK\Entities\Atoms\ReceiptItemType;
+use Digitalkassa\MDK\Entities\ReceiptAdapterInterface;
+use Digitalkassa\MDK\Collections\ReceiptItemCollection;
+use Digitalkassa\MDK\Exceptions\Base\InvalidArgumentException;
 
 require_once plugin_dir_path(__FILE__) . '../include.php';
 
@@ -21,7 +21,7 @@ require_once plugin_dir_path(__FILE__) . '../include.php';
 /**
  * Реализация адаптера чеков
  */
-class InnokassaReceiptAdapterConcrete implements ReceiptAdapterInterface
+class DigitalkassaReceiptAdapterConcrete implements ReceiptAdapterInterface
 {
     /**
      * @param SettingsAbstract $settings
@@ -71,7 +71,7 @@ class InnokassaReceiptAdapterConcrete implements ReceiptAdapterInterface
                 ->setVat(
                     $this->getVatProduct(
                         $order_item['product_id'],
-                        get_option('innokassa_option_vat'),
+                        get_option('digitalkassa_option_vat'),
                         $subType,
                         $siteId
                     )

@@ -3,33 +3,33 @@
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace
 
 /**
- * @link       https://innokassa.ru/
+ * @link       https://digitalkassa.ru/
  * @since      1.0.0
  *
- * @package    Innokassa
- * @subpackage Innokassa/includes
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/includes
  */
 
 /**
  * @since      1.0.0
- * @package    Innokassa
- * @subpackage Innokassa/includes
+ * @package    Digitalkassa
+ * @subpackage Digitalkassa/includes
  */
-class Innokassa
+class Digitalkassa
 {
     /**
      * @since    1.0.0
      * @access   protected
-     * @var      Innokassa_Loader    $loader    Maintains and registers all hooks for the plugin.
+     * @var      Digitalkassa_Loader    $loader    Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
     /**
      * @since    1.0.0
      * @access   protected
-     * @var      string    $Innokassa    The string used to uniquely identify this plugin.
+     * @var      string    $Digitalkassa    The string used to uniquely identify this plugin.
      */
-    protected $Innokassa;
+    protected $Digitalkassa;
 
     /**
      * @since    1.0.0
@@ -48,7 +48,7 @@ class Innokassa
         } else {
             $this->version = '1.0.0';
         }
-        $this->Innokassa = 'Innokassa';
+        $this->Digitalkassa = 'Digitalkassa';
 
         $this->loadDependencies();
         $this->defineAdminHooks();
@@ -61,13 +61,13 @@ class Innokassa
      */
     private function loadDependencies()
     {
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-Innokassa-loader.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-Digitalkassa-loader.php';
 
-        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-Innokassa-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-Digitalkassa-admin.php';
 
-        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-Innokassa-public.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-Digitalkassa-public.php';
 
-        $this->loader = new Innokassa_Loader();
+        $this->loader = new Digitalkassa_Loader();
     }
 
     /**
@@ -76,7 +76,7 @@ class Innokassa
      */
     private function defineAdminHooks()
     {
-        $plugin_admin = new InnokassaAdmin($this->getInnokassa(), $this->getVersion());
+        $plugin_admin = new DigitalkassaAdmin($this->getDigitalkassa(), $this->getVersion());
 
         $this->loader->add_action('admin_menu', $plugin_admin, 'addMenu');
         $this->loader->add_action('admin_init', $plugin_admin, 'registerSettings');
@@ -89,7 +89,7 @@ class Innokassa
      */
     private function definePublicHooks()
     {
-        $plugin_public = new InnokassaPublic($this->getInnokassa(), $this->getVersion());
+        $plugin_public = new DigitalkassaPublic($this->getDigitalkassa(), $this->getVersion());
     }
 
     /**
@@ -104,14 +104,14 @@ class Innokassa
      * @since     1.0.0
      * @return    string    The name of the plugin.
      */
-    public function getInnokassa()
+    public function getDigitalkassa()
     {
-        return $this->Innokassa;
+        return $this->Digitalkassa;
     }
 
     /**
      * @since     1.0.0
-     * @return    Innokassa_Loader    Orchestrates the hooks of the plugin.
+     * @return    Digitalkassa_Loader    Orchestrates the hooks of the plugin.
      */
     public function getLoader()
     {
